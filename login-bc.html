@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Hotspot Area SMP 2 Wonosari</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style type="text/css">
+	html, body {
+		background-image: url(img/background.jpeg);
+		background-size:cover;
+		background-attachment: fixed;
+	}
+</style>
+
+</head>
+
+<body>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	}
+	//-->
+	</script>
+$(endif)
+
+<div align="center">
+<a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)"></a>
+</div>
+
+
+<div style="min-width: 300px; width: auto; min-height: 400px; height: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: groove; border-radius: 10px; background-color: rgb(255, 255, 255, 0.3); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19); display: flex">
+	<div style="min-width: 300px;">
+		<div align="center" style="width: 100%; "><img src="img/logo.png" width="150px" height="150px"></div>
+		<div align="center" style="width: 100%; font-weight: bold; color: darkred; text-shadow: 0px 0px 10px #FFFFFF">
+			LOGIN TO HOTSPOT AREA<br>SMPN 2 WONOSARI
+		</div>
+		<div style="width: 100%; height: 150px; padding: 20px">
+			<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+				<input type="hidden" name="dst" value="$(link-orig)" />
+				<input type="hidden" name="popup" value="true" />
+				<div class="form-group" align="center">
+					<input class="form-control" style="width: 90%;" name="username" type="text" value="$(username)" placeholder="Username" />
+				</div>
+				<div class="form-group" align="center">
+					<input class="form-control" style="width: 90%" name="password" type="password" placeholder="Password" />
+				</div>
+				<div style="width: 100%">
+					<div class="form-group" style="position: fixed; left: 20px; bottom: 5px">
+						<input class="btn btn-success" type="submit" value="LOGIN" />
+					</div>
+					<div style="position: fixed; left: 170px; bottom: 21px">
+						<a class="btn btn-warning" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: white">LOGIN INFO</a>
+					</div>
+				</div>
+			</form>
+		</div>		
+	</div>
+	<div style="min-width: 0; width: auto; margin-top: 5px; margin-right: 5px">
+		<div class="collapse" id="collapseExample">
+			<div class="accordion" id="accordionExample" style="width: 300px">
+				<div class="card" style="background-color: rgb(255, 255, 255, 0.4);">
+					<div class="card-header" id="headingOne">
+						<h2 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Peserta Didik
+							</button>
+						</h2>
+					</div>
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+						<div class="card-body">
+							<table class="table-borderless">
+								<tr>
+									<td width="100px">Username</td>
+									<td width="10px">:</td>
+									<td>NIS (4 Digit)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>Contoh: 9255</td>
+								</tr>
+								<tr>
+									<td>Password</td>
+									<td>:</td>
+									<td>Tanggal Lahir</td>
+								</tr>
+								<tr>
+									<td colspan="3">(YYYYMMDD Contoh: 20191231)</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="card" style="background-color: rgb(255, 255, 255, 0.4);">
+					<div class="card-header" id="headingTwo">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Guru dan Karyawan
+							</button>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+							<table class="table-borderless">
+								<tr>
+									<td width="100px">Username</td>
+									<td width="10px">:</td>
+									<td>NIP (18 Digit)</td>
+								</tr>
+								<tr>
+									<td>Password</td>
+									<td>:</td>
+									<td>Tanggal Lahir</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>Format: YYYYMMDD</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="card" style="background-color: rgb(255, 255, 255, 0.4);">
+					<div class="card-header" id="headingThree">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Tamu
+							</button>
+						</h2>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div class="card-body">
+							Silahkan menghubungi <b><i>Network Administrator</i></b> di Kantor TU
+						</div>
+					</div>
+				</div>
+				$(if trial == 'yes')
+				<div class="card" style="background-color: rgb(255, 255, 255, 0.4);">
+					<div class="card-header" id="headingFour">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								Trial
+							</button>
+						</h2>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="notice">
+								Free trial available, <a style="color: #FF8080"href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">click here</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				$(endif)
+			</div>
+		</div>
+	</div>
+</div>
+
+$(if error)
+<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width: 300px; position: fixed; top: 5px; left: 50%; transform: translate(-50%, 0);">
+		$(error)
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+$(endif)
+
+<div style="width: 300px; padding: 5px; position: fixed; bottom: 5px; left: 50%; transform: translate(-50%, 0); color: red; background-color: rgb(255, 255, 255, 0.6); font-size: 12px; border-radius: 5px">
+	<marquee>Akses ke layanan hotspot ini kami pantau setiap saat, jadi gunakan dengan cerdas dan bijak.!</marquee>
+</div>
+
+<div style="position: fixed; right: 10px; bottom: 3px; font: italic; font-size: 10px; color: white; text-align: right;">
+	Design by <i>@mesaidlg</i>
+</div>
+<div style="position: fixed; left: 10px; bottom: 3px; font: italic; font-size: 10px; color: white; text-align: left;">
+	Powered by MikroTik RouterOS (RB1100Dx4)
+</div>
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript"></script>
+<!--
+document.login.username.focus();
+//-->
+
+</body>
+</html>
